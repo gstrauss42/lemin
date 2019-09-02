@@ -6,14 +6,47 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 11:53:57 by emanana           #+#    #+#             */
-/*   Updated: 2019/09/01 20:46:38 by emanana          ###   ########.fr       */
+/*   Updated: 2019/09/02 15:55:13 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <libft/libft.h>
+#include <include.h>
 
+int main(int argc, char **argv)
+{
+	int i;
+
+	i = 0;
+	if(argc > 1)
+	{
+		while(argv[i])
+		{
+			if(ft_strcmp(##start) == 0 || ft_strcmp(##end) == 0)
+				i++;
+		}
+		if(i = 2)
+		{
+			i = 0;
+			while(ft_strchr(argv[i], '-') == NULL)
+			{
+
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 typedef struct 		t_struct
 {
 	int				vn;
@@ -24,7 +57,9 @@ typedef struct		t_struct2
 {
 	t_node          *head;
 }					t_list;
+*/
 
+/*
 void 				addVertex(int a, int b, t_list **adjacent_list)
 {
 	t_node *temp;
@@ -64,32 +99,32 @@ int					main(void)
 	{
 		adjacent_list[i] = (t_list*)malloc(sizeof(t_list) * 1);
 		i++;
-	}
+	}*/
 	/*manually adding: the vertex and edges  G = (v, E); */
 
 	/* adding edges to the first vertex*/
-	addVertex(0, 1, adjacent_list);
+/*	addVertex(0, 1, adjacent_list);
 	addVertex(0, 3, adjacent_list);
-
+*/
 	/* adding edges to the second vertex*/
-	addVertex(1, 2, adjacent_list);
+/*	addVertex(1, 2, adjacent_list);
 	addVertex(1, 3, adjacent_list);
-
+*/
 	/* adding edges to the third vertex*/
-	 addVertex(2, 0, adjacent_list);
+/*	 addVertex(2, 0, adjacent_list);
 	 addVertex(2, 1, adjacent_list);
 	 addVertex(2, 4, adjacent_list);
-
+*/
 	 /* adding edge to the fourth vertex */
-	  addVertex(3, 0, adjacent_list);
+/*	  addVertex(3, 0, adjacent_list);
 	  addVertex(3, 3, adjacent_list);
-	  
+*/	  
 	  /*adding the edges to the 5th vertex*/ 
-	   addVertex(4, 0, adjacent_list);
-
+/*	   addVertex(4, 0, adjacent_list);
+*/
 
 	/*print the hash/graph */
-	int j;
+/*	int j;
 
 	j = 0;
 	while (j < vertexNumber)
@@ -105,4 +140,4 @@ int					main(void)
 		j++;
 	}
 	return (0);
-}
+}*/
