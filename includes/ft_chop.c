@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nodemake.c                                      :+:      :+:    :+:   */
+/*   ft_chop.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/03 06:51:20 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/04 12:16:09 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/09/04 12:05:43 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/09/04 12:08:47 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include "include.h"
 
-p_list	*ft_nodemake(char *str)
+void	ft_chop(char ***str)
 {
-	p_list	*ret;
-	
-	ret = (p_list *)malloc(sizeof(p_list *) * 25);
-	ret->name = ft_strndup(str, ' ');
-	ret->links = (p_list **)malloc(sizeof(p_list **));
-	return (ret);
+	int i;
+
+	i = 1;
+	while((*str)[i])
+	{
+		(*str)[i - 1] = (*str)[i];
+		i++;
+	}
+	(*str)[i - 1] = NULL;
 }

@@ -8,6 +8,7 @@ typedef struct		y_list
 	struct	y_list **links;
 }					p_list;
 
+void	ft_chop(char ***str);
 void	ft_assign(char ***positions, char ***links, char **argv);
 p_list	*ft_nodemake(char *str);
 

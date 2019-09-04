@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 10:28:37 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/04 10:56:59 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/04 12:24:56 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,15 @@ void	ft_assign(char ***positions, char ***links, char **argv)
 	i++;
 	(*positions)[pos] = ft_strdup(argv[i]);
 	pos++;
-	argv[i][0] = '#';
+	argv[i][1] = '#';
 	i = 0;
+	while(argv[i] && ft_strcmp(argv[i], "##end") != 0)
+		i++;
+	i++;
+	(*positions)[pos] = ft_strdup(argv[i]);
+	pos++;
+	argv[i][1] = '#';
+	i = 1;
 	while(argv[i])
 	{
 		if(ft_strchr(argv[i], '-') != NULL)
@@ -43,4 +50,6 @@ void	ft_assign(char ***positions, char ***links, char **argv)
 		}
 		i++;
 	}
+	(*links)[lin] = NULL;
+	(*positions)[pos] = NULL;
 }
