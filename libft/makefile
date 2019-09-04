@@ -6,7 +6,7 @@
 #    By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/29 15:49:05 by gstrauss          #+#    #+#              #
-#    Updated: 2019/08/30 13:42:55 by gstrauss         ###   ########.fr        #
+#    Updated: 2019/09/03 07:09:53 by gstrauss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	   ft_strandup.c ft_strcut.c ft_strndup.c ft_strnjoin.c ft_strnlen.c \
 	   ft_isint.c ft_lstdup.c ft_lstvalmake.c ft_lstlast.c ft_posdif.c \
 	   ft_reorder.c ft_isgreater.c ft_lstcheck.c ft_short_sort.c \
-	   ft_lstoutput.c ft_rcheck.c algo.c perform.c \
+	   ft_lstoutput.c ft_rcheck.c algo.c perform.c ft_strreplace.c \
 
 OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	   ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o \
@@ -52,7 +52,7 @@ OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	   ft_strandup.o ft_strcut.o ft_strndup.o ft_strnjoin.o ft_strnlen.o \
 	   ft_isint.o ft_lstdup.o ft_lstvalmake.o ft_lstlast.o ft_posdif.o \
 	   ft_reorder.o ft_isgreater.o ft_lstcheck.o ft_short_sort.o \
-	   ft_lstoutput.o ft_rcheck.o algo.o perform.o \
+	   ft_lstoutput.o ft_rcheck.o algo.o perform.o ft_strreplace.o \
 
 all: pushswap
 	gcc $(FLAGS) $(SRCS)

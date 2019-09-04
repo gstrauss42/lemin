@@ -6,11 +6,43 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:46:00 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/13 08:59:34 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/03 03:40:09 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char		*substring(char const *a, char c, int i);
+static int		length(char const *s, char c);
+
+char			**ft_strsplit(char const *s, char c)
+{
+	int		i;
+	int		g;
+	char	**ret;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	g = length(s, c);
+	if (!(ret = (char **)malloc((g + 3) * sizeof(char **))))
+		return (NULL);
+	g = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+		{
+			ret[g] = substring(s, c, i);
+			g++;
+			while (s[i] != c && s[i] != '\0')
+				i++;
+		}
+	}
+	ret[g] = NULL;
+	return (ret);
+}
 
 static char		*substring(char const *a, char c, int i)
 {
@@ -53,31 +85,4 @@ static int		length(char const *s, char c)
 	return (ret);
 }
 
-char			**ft_strsplit(char const *s, char c)
-{
-	int		i;
-	int		g;
-	char	**ret;
 
-	i = 0;
-	if (!s)
-		return (NULL);
-	g = length(s, c);
-	if (!(ret = (char **)malloc((g + 3) * sizeof(char **))))
-		return (NULL);
-	g = 0;
-	while (s[i] != '\0')
-	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != c && s[i] != '\0')
-		{
-			ret[g] = substring(s, c, i);
-			g++;
-			while (s[i] != c && s[i] != '\0')
-				i++;
-		}
-	}
-	ret[g] = NULL;
-	return (ret);
-}

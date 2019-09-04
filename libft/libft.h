@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/30 13:42:43 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/03 07:09:18 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ char			*ft_strcut(char *s, char c);
 char			*ft_strandup(char *str, char c);
 char			*ft_strndup(char *str, char c);
 
+char			*ft_strreplace(char *str, char c, char rep);
 int				ft_posdif(t_list *head, t_list *check);
 t_list			*ft_lstlast(t_list *head);
 t_list			*ft_lstdup(t_list *head);
