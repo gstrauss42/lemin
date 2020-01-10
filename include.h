@@ -1,7 +1,7 @@
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef INCLUDE_H
+# define INCLUDE_H
 
-typedef struct  s_list
+typedef struct  a_list
 {
     int     ants;
     char    *start;

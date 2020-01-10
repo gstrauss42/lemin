@@ -1,4 +1,5 @@
 #include "libft/libft.h"
+#include "include.h"
 
 data_val    *room_insert(data_val *ret)
 {
@@ -8,23 +9,23 @@ data_val    *room_insert(data_val *ret)
     count = 0;
     while(get_next_line(1, &line) != 0)
     {
-        if(strchr(line, "##start") != NULL)
+        if(ft_strstr(line, "##start") != NULL)
         {
             ft_strdel(&line);
             get_next_line(1, &line);
-            ret->start = ft_strnew(line);
+            ret->start = ft_strdup(line);
         }
-        else if(strchr(line, "##end") != NULL)
+        else if(ft_strstr(line, "##end") != NULL)
         {
             ft_strdel(&line);
             get_next_line(1, &line);
-            ret->end = ft_strnew(line);
+            ret->end = ft_strdup(line);
             ft_strdel(&line);
-            break();
+            break;
         }
         else
         {
-            ret->rooms[count] = ft_strnew(line);
+            ret->rooms[count] = ft_strdup(line);
             count++;
         }
         ft_strdel(&line);

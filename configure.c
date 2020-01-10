@@ -7,6 +7,7 @@ data_val    *configure(void)
 {
     data_val *ret;
 
+    ret = NULL;
     ret = data_val_mem(ret);
     printf("ants: %d\n", ret->ants);
     ret = room_insert(ret);
@@ -15,13 +16,16 @@ data_val    *configure(void)
     // testing
     int test = 0;
 
+    printf("start: %s\n", ret->start);
+    printf("end:   %s\n", ret->end);
+
     while(ret->rooms[test])
     {
         printf("rooms: %s\n", ret->rooms[test]);
         test++;
     }
     test = 0;
-    while(ret->rooms[links])
+    while(ret->links[test])
     {
         printf("links: %s\n", ret->links[test]);
         test++;
