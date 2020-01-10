@@ -10,19 +10,17 @@
 #                                                                              #
 # **************************************************************************** #
 
-PATHS = libft/libft.a includes/include.a
-
 FLAGS = -Wall -Werror -Wextra
 
+DATA = main.c configure.c data_val_mem.c link_insert.c room_insert.c libft/libft.a
+
 all:
-	gcc $(PATHS) main.c $(FLAGS)
+	gcc $(DATA) $(FLAGS)
 
 compile:
 	make -C libft
 	make -C libft clean
-	make -C includes
-	make -C includes clean
-	gcc libft/libft.a main.c includes/include.a $(FLAGS)
+	gcc $(DATA) $(FLAGS)
 
 debug:
 	gcc $(PATHS) -g
