@@ -13,9 +13,12 @@ char    **pathfinder(data_val *data)
     paths = (char **)malloc(10000);
     // path gen then path select
     current_possitions[0] = ft_strdup(data->start);
-    
+
     // write algorithm to gen an array of all possible paths
+    // write all paths to not include a duplicate string
+
     
+
     while(data->rooms)
     {
         while(current_positions)
@@ -36,7 +39,7 @@ char    **pathfinder(data_val *data)
         {
             if(paths[count][i]) //if path[count] doesnt include an end var remove the count index
             i++;
-            
+
         }
     }
     while()

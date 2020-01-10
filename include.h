@@ -14,5 +14,6 @@ data_val    *link_insert(data_val *ret);
 data_val    *data_val_mem(data_val *ret);
 data_val    *configure(void);
 data_val    *room_insert(data_val *ret);
+char        **pather(char **path, char *point, data_val *data);
 
 #endif
