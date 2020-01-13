@@ -17,7 +17,6 @@ char    **pathfinder(data_val *data)
 
     // path gen then path select
 
-
     ft_addend(todo[0], data->start);
 
     // gen new path for all next nodes that arent already in each path 
