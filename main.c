@@ -3,9 +3,9 @@
 
 int main(void)
 {
-    char    **paths;
-    data_val *data;
-    
+    char        **paths;
+    data_val    *data;
+
     data = configure();
     paths = pathfinder(data);
     // execute(paths, data);

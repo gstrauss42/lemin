@@ -10,6 +10,7 @@ typedef struct  a_list
     char    **rooms;
 }               data_val;
 
+char        **ft_addend(char ** path, char *string);
 data_val    *link_insert(data_val *ret);
 data_val    *data_val_mem(data_val *ret);
 data_val    *configure(void);
