@@ -8,6 +8,6 @@ int main(void)
 
     data = configure();
     paths = pathfinder(data);
-    // execute(paths, data);
+    execute(paths, data);
     return(0);
 }

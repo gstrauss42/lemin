@@ -1,51 +1,27 @@
 #include "libft/libft.h"
 #include "include.h"
 
-char    **pathfinder(data_val *data)
+char    ***path_finder(char ***incomplete_paths, data_val *data);
+
+char    ***pathfinder(data_val *data)
+{
+    char    ***incomplete_paths;
+    char    ***paths;
+
+    paths = path_finder(incomplete_paths, data);
+    return(pathselecter(paths));
+}
+
+char    ***path_finder(char ***incomplete_paths, data_val *data)
 {
     int     i;
-    int     count;
-    char    ***todo;
-    char    **paths;
-    char    **ret;
+    char    ***complete_paths;
 
-    i       = 0;
-    count   = 0;
-    paths   = (char **)malloc(10000);
-    todo   = (char **)malloc(1000);
-    ret     = (char ***)malloc(1000);
-
-    // path gen then path select
-
-    ft_addend(todo[0], data->start);
-
-    // gen new path for all next nodes that arent already in each path 
-
-    // write algorithm to gen an array of all possible paths
-    // write all paths to not include a duplicate string
-    
-    while(/* while unmapped paths exist */) 
+    i = 0;
+    ft_addend(incomplete_paths[0], data->start);
+    while(incomplete_paths[0])
     {
-        // find an incomplete path
-        // ft_addend(todo[0], data->start);
-        
-        while(data->links[i]) // add all possible path variations to that path variation
-        {
-            // if path had end added remove path from list and move to ret
-        }
-        
+        path_branch(&complete_paths, &incomplete_paths, data);
     }
-
-    count = 0;
-    // remove all paths that dont include or end on end 
-    while(paths[count])
-    {
-        while(paths[count][i])
-        {
-            if(paths[count][i]) //if path[count] doesnt include an end var remove the count index
-            i++;
-
-        }
-    }
-    while()
+    return(complete_paths);
 }
