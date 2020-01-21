@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    char        **paths;
+    char        ***paths;
     data_val    *data;
 
     data = configure(); // tick

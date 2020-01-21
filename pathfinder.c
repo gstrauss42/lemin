@@ -24,8 +24,17 @@ char    ***path_finder(char ***incomplete_paths, data_val *data)
     ft_addend(incomplete_paths[0], data->start);
     while(incomplete_paths[0])
     {
-        // present point
         path_branch(&complete_paths, &incomplete_paths, data);
     }
     return(complete_paths);
+}
+
+char ***pathselector(char ***paths)
+{
+    char ***ret;
+
+    while(paths)
+    {
+    // choose all correct paths and then put those into ret to return to be used all the way up in main
+    }
 }

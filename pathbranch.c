@@ -5,14 +5,16 @@ void    path_branch(char ****complete_paths, char ****incomplete_paths, data_val
 {
     char **connectors;
 // write incomplete check
-    if(incomplete_check(incomplete_paths, complete_paths, data) == 1)
-    {
-        connectors = find_all((*incomplete_paths)[0], data);
+    if((connectors = incomplete_check((*incomplete_paths)[0], data)) != NULL)
         ft_dupadd(incomplete_paths, connectors);
-    }
     // write transfer
     else
         transfer(complete_paths, incomplete_paths);
+}
+
+void    transfer(char ****complete_paths, char ****incomplete_paths)
+{
+    // write a move funtion to put the first path of incomplete_paths onto complete_paths
 }
 
 char    **find_all(char **incomplete_paths, data_val *data)
@@ -29,6 +31,7 @@ char    **find_all(char **incomplete_paths, data_val *data)
     }
 }
 
+
 void    config(char *link, char **incomplete_paths, char ***connectors, char *last)
 {
     int i = 0;
@@ -42,5 +45,39 @@ void    config(char *link, char **incomplete_paths, char ***connectors, char *la
             return;
         else
             ft_memcpy(connectors[strlen(connectors)], node);
+    }
+}
+
+
+// checks to make sure that the present top path is still unfinished
+char    **incomplete_check(char **incomplete_paths, data_val *data)
+{
+    int i = 0;
+    int p = 0;
+    char **connectors;
+    // checks if end is the last node of the current path
+
+    if(ft_strcmp(incomplete_paths[ft_strlen(incomplete_paths)], data->end) == 0)
+        return(0);
+    connectors = find_all(incomplete_paths, data);
+    while(connectors[i])
+    {
+        while(incomplete_paths[p])
+        {
+            if(ft_strcmp(incomplete_paths[p], connectors[i]) == 0)
+            {
+                p = -1;
+                break;
+            }
+        }
+        if(p >= 0)
+        {
+            return(connectors)
+        }
+        else
+        {
+            p = 0;
+            i++;
+        }
     }
 }
