@@ -1,8 +1,9 @@
 #include "libft/libft.h"
 #include "include.h"
 
-char    **ft_dupadd(char ****paths, char ****todo)
+void    ft_dupadd(char ****paths, char **connectors)
 {
-    // take first node or passed node and then create new indexes in paths to assign copies of the base path with new last nodes that are found in data then remove the node of todo and
-    todo[0][]
+    // copy first path
+    // add first connector to the first path;
+    // add all other elems to the copies and insert on end
 }
