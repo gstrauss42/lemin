@@ -21,14 +21,35 @@ void    execute(char ***paths, data_val *data)
                     start[i][p + 1] = 1;
                     start[i][p] = 0;
                     // do the movement priting
+                    printf("did the things\n");
                 }
                 p--;
             }
             i--;
             p = maxlen_p(start, i);
-        }   // write these maxlen functions for each movement
+        }   
         i = maxlen_i(start);
         p = maxlen_p(start, i);
     }
     // move backwards through the paths to move ants until only end contains ants
+}
+
+int maxlen_i(root_struct start)
+{
+    int i;
+
+    i = 0;
+    while(start->links[i])
+        i++;
+    return(i);
+}
+
+int maxlen_p(root_struct start, int i)
+{
+    int p;
+
+    p = 0;
+    while(start->links[i][p])
+        p++;
+    return(p);
 }

@@ -24,7 +24,8 @@ typedef struct random
     struct info **links;
 }              root_struct;
 
-char        **pathfinder(data_val *data);
+void        execute(char ***paths, data_val *data);
+char        ***pathfinder(data_val *data);
 char        **ft_addend(char ** path, char *string);
 data_val    *link_insert(data_val *ret);
 data_val    *data_val_mem(data_val *ret);
