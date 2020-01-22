@@ -9,6 +9,20 @@ typedef struct  a_list
     char    **links;
     char    **rooms;
 }               data_val;
+        
+
+typedef struct info
+{
+    char        *room;
+    int         ant;
+}              path;
+
+typedef struct random
+{
+    char        *start;
+    int         ant;
+    struct info **links;
+}              root_struct;
 
 char        **pathfinder(data_val *data);
 char        **ft_addend(char ** path, char *string);
