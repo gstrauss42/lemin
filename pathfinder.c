@@ -9,9 +9,7 @@ char    ***pathfinder(data_val *data)
     char    ***incomplete_paths;
     char    ***paths;
 
-    // might need to be initialiased with a first value
     incomplete_paths = NULL;
-
     paths = path_finder(incomplete_paths, data);
     // write pathselector
     return(pathselector(paths));

@@ -6,9 +6,9 @@ int main(void)
     char        ***paths;
     data_val    *data;
 
-    data = configure(); // tick
-    paths = pathfinder(data);
+    data    = configure();
+    paths   = pathfinder(data);
     execute(paths);
-    printf("finished\n");
+    printf("testing finished\n");
     return(0);
 }

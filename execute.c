@@ -36,7 +36,6 @@ void    execute(char ***paths)
         i = maxlen_i(start);
         p = maxlen_p(start, i);
 //    }
-    // move backwards through the paths to move ants until only end contains ants
 }
 
 int maxlen_i(root_struct *start)
