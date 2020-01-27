@@ -24,13 +24,16 @@ typedef struct random
     struct info **links;
 }              root_struct;
 
-void        execute(char ***paths, data_val *data);
+void        ft_dupadd(char ****paths, char **connectors);
+void        execute(char ***paths);
 char        ***pathfinder(data_val *data);
 char        **ft_addend(char ** path, char *string);
 data_val    *link_insert(data_val *ret);
 data_val    *data_val_mem(data_val *ret);
 data_val    *configure(void);
 data_val    *room_insert(data_val *ret);
-char        **pather(char **path, char *point, data_val *data);
+char        **pather(char **path, char *point);
+void        path_branch(char ****complete_paths, char ****incomplete_paths, data_val *data);
+root_struct *ft_assign_to_struct(char ***paths);
 
 #endif

@@ -12,7 +12,10 @@
 
 FLAGS = -Wall -Werror -Wextra
 
-DATA = main.c configure.c data_val_mem.c link_insert.c room_insert.c libft/libft.a ft_addend.c main.c pathfinder.c
+DATA = main.c configure.c data_val_mem.c link_insert.c\
+		room_insert.c libft/libft.a ft_addend.c main.c\
+		pathfinder.c execute.c ft_assign_to_struct.c\
+		ft_dupadd.c pathbranch.c pather.c
 
 all:
 	gcc $(DATA) $(FLAGS)

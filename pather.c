@@ -1,7 +1,7 @@
 #include "libft/libft.h"
 #include "include.h"
 
-char    **pather(char **path, char *point, data_val *data)
+char    **pather(char **path, char *point)
 {
     int count;
 

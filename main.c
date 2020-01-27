@@ -8,7 +8,7 @@ int main(void)
 
     data = configure(); // tick
     paths = pathfinder(data);
-    execute(paths, data);
+    execute(paths);
     printf("finished\n");
     return(0);
 }
