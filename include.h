@@ -9,7 +9,6 @@ typedef struct  a_list
     char    **links;
     char    **rooms;
 }               data_val;
-        
 
 typedef struct info
 {
